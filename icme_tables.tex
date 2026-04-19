@@ -1,0 +1,48 @@
+% Add \usepackage{booktabs} to your preamble if not already there.
+\begin{table*}[ht]
+  \caption{%
+    Observed parameters and kink instability timescales for 15 ICMEs detected
+    by PSP and Solar Orbiter (SolO).
+    $r$ (au) is the heliocentric distance, $n_p$ (cm$^{-3}$) the median proton
+    density matched from in-situ data, and $\Delta t_\rho$ (d) the time offset
+    of the matched density observation.
+    $B_{0}$ (nT) is the axial field strength and $q$ (au$^{-1}$) the signed
+    twist parameter; the flux rope radius follows as $R=1/|q|$.
+    $\sigma$ (d$^{-1}$) $= 1/T$ is the physical growth rate and $T$ (d) the
+    instability timescale for azimuthal modes $m{=}1$ and $m{=}2$.
+    Gold--Hoyle profile ($\alpha=1$) assumed throughout.
+    Entries ``$\cdots$'' indicate no unstable mode was found.%
+  }
+  \label{tab:icme}
+  \setlength{\tabcolsep}{3pt}
+  \centering
+  \begin{tabular}{c l c c r r r r r r r r r}
+    \toprule
+    \multicolumn{7}{c}{MFR observation} &
+    \multicolumn{2}{c}{G-H Fitting} &
+    \multicolumn{2}{c}{$m=1$} &
+    \multicolumn{2}{c}{$m=2$} \\
+    \cmidrule(lr){1-7}\cmidrule(lr){8-9}\cmidrule(lr){10-11}\cmidrule(lr){12-13}
+    {No.} & {Start (UT)} & {Dur.} & {S/C} & {$r$} & {$n_p$} & {$\Delta t_\rho$} &
+    {$B_{0}$} & {$q$} &
+    {$\sigma$} & {$T$} &
+    {$\sigma$} & {$T$} \\
+    \midrule
+    1 & 2018-10-30 20:25 & 11h 54m & PSP & 0.26 & 178.3 & 0.00 & 56.0 & -5.2 & 0.082 & 12.2 & 0.026 & 39.0 \\
+    2 & 2018-11-21 23:51 & 6h 8m & PSP & 0.25 & 168.3 & 10.00 & 100.6 & 7.3 & 0.300 & 3.3 & 0.096 & 10.5 \\
+    3 & 2019-03-15 12:11 & 5h 38m & PSP & 0.55 & 27.6 & 0.00 & 36.0 & 3.6 & 0.064 & 15.6 & 0.020 & 49.4 \\
+    4 & 2019-03-24 03:45 & 13h 53m & PSP & 0.39 & 50.5 & 0.00 & 36.7 & 3.0 & 0.033 & 29.9 & 0.010 & 97.1 \\
+    5 & 2020-02-11 05:08 & 6h 27m & PSP & 0.42 & 74.5 & 0.00 & 43.6 & 4.6 & 0.077 & 12.9 & 0.024 & 41.9 \\
+    7 & 2020-06-23 07:07 & 9h 45m & PSP & 0.48 & 29.7 & 0.00 & 20.1 & -2.7 & 0.019 & 52.1 & 0.006 & 163.8 \\
+    9 & 2020-09-12 13:33 & 6h 2m & PSP & 0.47 & 24.8 & 0.00 & 23.7 & 9.3 & 0.298 & 3.4 & 0.098 & 10.2 \\
+    11 & 2021-02-11 16:17 & 8h 40m & PSP & 0.63 & 19.9 & 0.00 & 15.4 & 2.6 & 0.017 & 60.4 & 0.005 & 192.2 \\
+    13 & 2021-05-06 18:26 & 20h 41m & SolO & 0.91 & 7.5 & 0.00 & 13.6 & -3.1 & 0.034 & 29.0 & 0.011 & 91.7 \\
+    15 & 2021-05-27 20:14 & 14h 13m & SolO & 0.95 & 16.8 & 0.00 & 11.1 & 4.0 & 0.031 & 31.9 & 0.010 & 104.1 \\
+    23 & 2021-08-25 01:06 & 9h 37m & SolO & 0.63 & 24.3 & 0.00 & 16.2 & -2.3 & 0.012 & 83.4 & 0.004 & 252.9 \\
+    24 & 2021-10-04 07:01 & 5h 58m & SolO & 0.65 & 14.8 & 0.00 & 11.6 & -6.6 & 0.095 & 10.5 & 0.030 & 33.0 \\
+    26 & 2021-10-15 09:54 & 13h 17m & SolO & 0.72 & 24.0 & 0.00 & 14.7 & -2.2 & 0.010 & 101.6 & 0.003 & 308.0 \\
+    27 & 2021-11-04 01:25 & 18h 22m & SolO & 0.83 & 6.8 & 0.00 & 20.6 & -1.0 & 0.002 & 445.4 & 0.001 & 802.7 \\
+    28 & 2022-01-25 14:02 & 1d 17h 13m & SolO & 0.89 & 4.1 & 0.00 & 12.5 & -0.7 & 0.000 & 2537.7 & 0.000 & 3760.7 \\
+    \bottomrule
+  \end{tabular}
+\end{table*}
