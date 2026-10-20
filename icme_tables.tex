@@ -1,47 +1,41 @@
-% Add \usepackage{booktabs} to your preamble if not already there.
 \begin{table*}[ht]
+  \footnotesize
   \caption{%
-    Observed parameters and kink instability timescales for 15 ICMEs detected
-    by PSP and Solar Orbiter (SolO).
-    $r$ (au) is the heliocentric distance and $n_p$ (cm$^{-3}$) the median
-    proton density from in-situ data matched to each event.
-    $B_{0}$ (nT) is the axial field strength and $q$ (au$^{-1}$) the signed
-    twist parameter; the flux rope radius follows as $R=1/|q|$.
-    $\sigma$ (d$^{-1}$) $= 1/T$ is the physical growth rate and $T$ (d) the
-    instability timescale for azimuthal modes $m{=}1$ and $m{=}2$.
-    Gold--Hoyle profile ($\alpha=1$) assumed throughout.
-    Entries ``$\cdots$'' indicate no unstable mode was found.%
+    Observed parameters and instability timescales for 15 ICMEs detected by PSP and Solar Orbiter (SO).
+    $r$ (au) is the heliocentric distance and $n_p$ (cm$^{-3}$) the median proton density during the flux rope crossing.
+    $B_0$ (nT) and $\Gamma$ (turns au$^{-1}$) are the axial field strength and the twist per unit length from the Gold--Hoyle fits of \cite{goodTurbulence2023}.
+    $R$ (au) is the flux rope radius, estimated from the mean radial speed, the crossing duration and the impact parameter, and $q = 2\pi|\Gamma| R$ is the dimensionless twist parameter of the modified Gold--Hoyle model.
+    $T$ (days) is the growth timescale of the azimuthal modes $m = 1$ and $m = 2$ for $\fpar = 1$.
+    Events have been renumbered 1--15 and no longer correspond to event IDs in \cite{goodTurbulence2023}.%
   }
   \label{tab:icme}
-  \setlength{\tabcolsep}{3pt}
+  \setlength{\tabcolsep}{2.5pt}
   \centering
   \begin{tabular}{c l c c r r r r r r r r}
     \toprule
     \multicolumn{6}{c}{MFR observation} &
-    \multicolumn{2}{c}{G-H Fitting} &
-    \multicolumn{2}{c}{$m=1$} &
-    \multicolumn{2}{c}{$m=2$} \\
-    \cmidrule(lr){1-6}\cmidrule(lr){7-8}\cmidrule(lr){9-10}\cmidrule(lr){11-12}
+    \multicolumn{4}{c}{Flux rope} &
+    \multicolumn{2}{c}{$T$ (days)} \\
+    \cmidrule(lr){1-6}\cmidrule(lr){7-10}\cmidrule(lr){11-12}
     {No.} & {Start (UT)} & {Dur.} & {S/C} & {$r$} & {$n_p$} &
-    {$B_{0}$} & {$q$} &
-    {$\sigma$} & {$T$} &
-    {$\sigma$} & {$T$} \\
+    {$B_{0}$} & {$\Gamma$} & {$R$} & {$q$} &
+    {$m=1$} & {$m=2$} \\
     \midrule
-    1 & 2018-10-30 20:25 & 11h 54m & PSP & 0.26 & 178.3 & 56.0 & -5.2 & 0.082 & 12.2 & 0.026 & 39.0 \\
-    2 & 2018-11-11 23:51 & 6h 8m & PSP & 0.25 & 168.3 & 100.6 & 7.3 & 0.300 & 3.3 & 0.096 & 10.5 \\
-    3 & 2019-03-15 12:11 & 5h 38m & PSP & 0.55 & 27.6 & 36.0 & 3.6 & 0.064 & 15.6 & 0.020 & 49.4 \\
-    4 & 2019-03-24 03:45 & 13h 53m & PSP & 0.39 & 50.5 & 36.7 & 3.0 & 0.033 & 29.9 & 0.010 & 97.1 \\
-    5 & 2020-02-11 05:08 & 6h 27m & PSP & 0.42 & 74.5 & 43.6 & 4.6 & 0.077 & 12.9 & 0.024 & 41.9 \\
-    7 & 2020-06-23 07:07 & 9h 45m & PSP & 0.48 & 29.7 & 20.1 & -2.7 & 0.019 & 52.1 & 0.006 & 163.8 \\
-    9 & 2020-09-12 13:33 & 6h 2m & PSP & 0.47 & 24.8 & 23.7 & 9.3 & 0.298 & 3.4 & 0.098 & 10.2 \\
-    11 & 2021-02-11 16:17 & 8h 40m & PSP & 0.63 & 19.9 & 15.4 & 2.6 & 0.017 & 60.4 & 0.005 & 192.2 \\
-    13 & 2021-05-06 18:26 & 20h 41m & SolO & 0.91 & 7.5 & 13.6 & -3.1 & 0.034 & 29.0 & 0.011 & 91.7 \\
-    15 & 2021-05-27 20:14 & 14h 13m & SolO & 0.95 & 16.8 & 11.1 & 4.0 & 0.031 & 31.9 & 0.010 & 104.1 \\
-    23 & 2021-08-25 01:06 & 9h 37m & SolO & 0.63 & 24.3 & 16.2 & -2.3 & 0.012 & 83.4 & 0.004 & 252.9 \\
-    24 & 2021-10-04 07:01 & 5h 58m & SolO & 0.65 & 14.8 & 11.6 & -6.6 & 0.095 & 10.5 & 0.030 & 33.0 \\
-    26 & 2021-10-15 09:54 & 13h 17m & SolO & 0.72 & 24.0 & 14.7 & -2.2 & 0.010 & 101.6 & 0.003 & 308.0 \\
-    27 & 2021-11-04 01:25 & 18h 22m & SolO & 0.83 & 6.8 & 20.6 & -1.0 & 0.002 & 445.4 & 0.001 & 802.7 \\
-    28 & 2022-01-25 14:02 & 1d 17h 13m & SolO & 0.89 & 4.1 & 12.5 & -0.7 & 0.000 & 2537.7 & 0.000 & 3760.7 \\
+    1 & 2018-10-30 20:25 & 11h 54m & PSP & 0.26 & 178.3 & 56.0 & $-5.2$ & 0.048 & 1.56 & 13 & 33 \\
+    2 & 2018-11-11 23:51 & 6h 8m & PSP & 0.25 & 168.3 & 100.6 & 7.3 & 0.029 & 1.34 & 6.2 & 14 \\
+    3 & 2019-03-15 12:11 & 5h 38m & PSP & 0.55 & 27.6 & 36.0 & 3.6 & 0.032 & 0.71 & 47 & 71 \\
+    4 & 2019-03-24 03:45 & 13h 53m & PSP & 0.39 & 50.7 & 36.7 & 3.0 & 0.068 & 1.28 & 24 & 51 \\
+    5 & 2020-02-11 05:08 & 6h 27m & PSP & 0.42 & 74.5 & 43.6 & 4.6 & 0.026 & 0.75 & 43 & 67 \\
+    6 & 2020-06-23 07:07 & 9h 45m & PSP & 0.48 & 29.7 & 20.1 & $-2.7$ & 0.060 & 1.01 & 55 & 100 \\
+    7 & 2020-09-12 13:33 & 6h 2m & PSP & 0.47 & 24.8 & 23.7 & 7.3 & 0.032 & 1.46 & 9.0 & 21 \\
+    8 & 2021-02-11 16:17 & 8h 40m & PSP & 0.63 & 19.9 & 15.4 & 2.6 & 0.040 & 0.65 & 163 & 238 \\
+    9 & 2021-05-06 18:26 & 20h 41m & SO & 0.91 & 7.5 & 13.6 & $-3.1$ & 0.109 & 2.12 & 15 & 45 \\
+    10 & 2021-05-27 20:14 & 14h 13m & SO & 0.95 & 16.8 & 11.1 & 4.0 & 0.054 & 1.36 & 31 & 70 \\
+    11 & 2021-08-25 01:06 & 9h 37m & SO & 0.63 & 24.3 & 16.2 & $-2.3$ & 0.043 & 0.63 & 209 & 302 \\
+    12 & 2021-10-04 07:01 & 5h 58m & SO & 0.65 & 14.8 & 11.6 & $-6.6$ & 0.019 & 0.81 & 44 & 70 \\
+    13 & 2021-10-15 09:54 & 13h 17m & SO & 0.72 & 24.0 & 14.7 & $-2.2$ & 0.053 & 0.73 & 165 & 252 \\
+    14 & 2021-11-04 01:25 & 18h 22m & SO & 0.83 & 6.8 & 20.6 & $-1.0$ & 0.150 & 0.94 & 80 & 138 \\
+    15 & 2022-01-25 14:02 & 41h 13m & SO & 0.89 & 4.1 & 12.5 & $-0.7$ & 0.209 & 0.92 & 152 & 260 \\
     \bottomrule
   \end{tabular}
 \end{table*}
